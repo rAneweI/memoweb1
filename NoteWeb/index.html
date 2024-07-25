@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEMO</title>
+    <script>
+      window.addEventListener("beforeunload", function (event) {
+        event.preventDefault();
+        event.returnValue = ""; // 대부분의 브라우저에서 동작하게 하기 위함
+      });
+
+      function confirmRefresh(event) {
+        const confirmationMessage = "";
+        if (!confirm(confirmationMessage)) {
+          event.preventDefault();
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        margin: 0;
+      }
+      .tarea {
+        width: calc(100% - 40px); /* 패딩을 제외한 너비 설정 */
+        margin: 0 auto;
+        padding: 20px;
+        height: 80vh;
+        font-size: 30px;
+        background-color: rgb(255, 255, 111);
+        display: block;
+        caret-color: red;
+        box-sizing: border-box;
+        resize: none;
+      }
+      .copyright {
+        margin-top: 30px;
+        text-align: center;
+        font-family: serif;
+      }
+      .logo {
+        margin-left: 50px;
+        font-family: serif;
+      }
+      .email {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="logo">MEMO</h1>
+    <textarea class="tarea"></textarea>
+  </body>
+  <footer>
+    <div class="copyright">&copy; copyright reserved DECEMBER</div>
+    <div class="email">
+      <a href="mailto:jl9181238@gmail.com">email to DECEMBER</a>
+    </div>
+  </footer>
+</html>
